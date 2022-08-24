@@ -39,8 +39,8 @@ No modules.
 | <a name="output_source_schema_ids"></a> [source\_schema\_ids](#output\_source\_schema\_ids) | Source schema id |
 | <a name="output_source_table_name"></a> [source\_table\_name](#output\_source\_table\_name) | source table name |
 | <a name="output_source_table_ids"></a> [source\_table\_ids](#output\_source\_table\_ids) | Source table ids |
-| <a name="output_file_format_names"></a> [file\_format\_names](#output\_file\_format\_names) | File formate names |
-| <a name="output_file_format_ids"></a> [file\_format\_ids](#output\_file_\format\_ids) | File formate ids |
+| <a name="output_file_format_names"></a> [file\_format\_names](#output\_file\_format\_names) | File format names |
+| <a name="output_file_format_ids"></a> [file\_format\_ids](#output\_file_\format\_ids) | File format ids |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Authors
 
