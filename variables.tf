@@ -7,7 +7,7 @@ variable "table_name" {
   description = "Will name the table"
 }
 
-variable "fileformat_name" {
+variable "file_format_name" {
   type        = string
   description = "Will name the file formate"
 }
@@ -31,7 +31,7 @@ variable "ingest_schema_config" {
     condition = (
       length(var.ingest_schema_config) > 0
     )
-    error_message = "Ingest  schema is required and cannot be empty."
+    error_message = "Ingest schema is required and cannot be empty."
   }
 }
 
@@ -40,9 +40,9 @@ variable "column_name" {
   description = "Name of the column"
 }
 
-variable "colume_type" {
+variable "column_type" {
   type        = string
-  description = "Type of the column"
+  description = "Type of column"
 }
 
 variable "keys_list" {

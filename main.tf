@@ -1,7 +1,3 @@
-################################
-#####   Schemas    ######
-################################
-
 resource "snowflake_schema" "ingest" {
   name     = upper(var.source_name)
   database = var.ingest_database_id
@@ -19,7 +15,7 @@ resource "snowflake_table" "ingest" {
 
   column {
     name = var.column_name
-    type = var.colume_type
+    type = var.column_type
   }
 
   primary_key {
@@ -30,7 +26,7 @@ resource "snowflake_table" "ingest" {
 resource "snowflake_file_format" "ingest" {
   for_each = var.source_files_format_dictionary
   # required
-  name        = upper(var.fileformat_name)
+  name        = upper(var.file_format_name)
   database    = var.ingest_database_id
   schema      = snowflake_schema.ingest.name
   format_type = try(var.source_files_format_dictionary.format_type, null)
