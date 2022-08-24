@@ -2,6 +2,15 @@ variable "source_name" {
   type        = string
   description = "Will name the schemas"
 }
+variable "table_name" {
+  type        = string
+  description = "Will name the table"
+}
+
+variable "file_format_name" {
+  type        = string
+  description = "Will name the file formate"
+}
 
 variable "ingest_database_id" {
   type        = string
@@ -22,11 +31,22 @@ variable "ingest_schema_config" {
     condition = (
       length(var.ingest_schema_config) > 0
     )
-    error_message = "Ingest  schema is required and cannot be empty."
+    error_message = "Ingest schema is required and cannot be empty."
   }
 }
-variable "ingest_tables_config" {
-  type        = map(any)
-  description = "Raw table of the source"
-  default     = {}
+
+variable "column_name" {
+  type        = string
+  description = "Name of the column"
+}
+
+variable "column_type" {
+  type        = string
+  description = "Type of column"
+}
+
+variable "keys_list" {
+  type        = list(string)
+  description = "Primary key values"
+  default     = []
 }
